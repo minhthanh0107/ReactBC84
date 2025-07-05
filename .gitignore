@@ -22,4 +22,5 @@
 # *.njsproj
 # *.sln
 # *.sw?
-## Loại bỏ các file đưa lên git
+# Loại bỏ các file đưa lên git
+node_modules
