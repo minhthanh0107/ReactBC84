@@ -14,8 +14,23 @@ import DemoChangeColor from "./RenderStatement/DemoChangeColor";
 import DemoTinker from "./RenderStatement/DemoTinker";
 import DemoStyle from "./StyleComponent/DemoStyle";
 import DemoProps from "./Props/DemoProps";
+import BT_ProductList from "./Props/BTProps/BT_ProductList";
+import BT_StateProps from "./Props/BT_StateProps/BT_StateProps";
+import BT_ChonXe from "./Props/BT_ChonXe/BT_ChonXe";
+import BT_MonAn from "./Props/BT_MonAn/BT_MonAn";
+import ProductsPage from "./api/ProductsPage";
+import ToDoListApi from "./api/ToDoListApi";
+import DemoFormLogin from "./Form/DemoFormLogin";
+import DemoFormIk from "./Form/DemoFormIk";
 // import './index.css'
 // import App from './App.jsx'
+
+
+/*
+  Phân biệt state và props:
+  state: giá trị thay đổi dùng để binding lên giao diện, state có thể gán lại giá trị (setState)
+  props: giá trị có thể  thay đổi dùng để binding lên giao diện, props ko thể gán lại giá trị (readonly)
+*/
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -29,7 +44,15 @@ createRoot(document.getElementById("root")).render(
       {/* <DemoChangeColor/> */}
       {/* <DemoTinker/> */}
       {/* <DemoStyle/> */}
-      <DemoProps/>
+      {/* <DemoProps/> */}
+      {/* <BT_ProductList/> */}
+      {/* <BT_StateProps/> */}
+      {/* <BT_ChonXe/> */}
+      {/* <BT_MonAn/> */}
+      {/* <ProductsPage/> */}
+      {/* <ToDoListApi/> */}
+      {/* <DemoFormLogin/> */}
+      <DemoFormIk/>
     </>
   </StrictMode>
 );
