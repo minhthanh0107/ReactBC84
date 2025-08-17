@@ -38,6 +38,33 @@ const ReduxShoppingCartPage = () => {
       dataIndex: "price",
       index: "price",
     },
+    {
+      title: "Action",
+      dataIndex: "action",
+      index: "action",
+      render: (value, item) => {
+        return (
+          <div>
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                console.log(item.id, "edit");
+              }}
+            >
+              Edit
+            </button>
+            <button
+              className="btn btn-danger mx-2"
+              onClick={() => {
+                console.log(item.id, "delete");
+              }}
+            >
+              Delete
+            </button>
+          </div>
+        );
+      },
+    },
   ];
   return (
     <div className="container mt5`">

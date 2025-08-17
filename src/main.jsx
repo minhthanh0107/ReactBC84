@@ -43,6 +43,7 @@ import { store } from "./redux/store";
 import ChangeNumberRedux from "./Pages/ReduxDemo/ChangeNumberRedux";
 import ReduxProductsPage from "./Pages/ReduxProducts";
 import ReduxShoppingCartPage from "./Pages/ReduxShoppingCart";
+import BookingTicketPage from "./Pages/ReduxDemo/BookingTicketPage";
 
 /*
   Phân biệt state và props:
@@ -94,6 +95,7 @@ createRoot(document.getElementById("root")).render(
               path="redux-shopping-cart"
               element={<ReduxShoppingCartPage />}
             ></Route>
+            <Route path="booking-ticket" element={<BookingTicketPage/>} ></Route>
           </Route>
 
           <Route

@@ -129,6 +129,9 @@ const HeaderHome = () => {
               <NavLink className="dropdown-item" to="redux-shopping-cart">
                 Demo shopping cart
               </NavLink>
+              <NavLink className="dropdown-item" to="booking-ticket">
+                Demo Booking Ticket
+              </NavLink>
             </div>
           </li>
         </ul>
