@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 const HeaderHome = () => {
   const navigate = useNavigate();
   const { carts } = useSelector((state) => state.product);
-  console.log(carts);
 
   const handleRedirectShoppingCart = () => {
     navigate("/redux-shopping-cart");
@@ -131,6 +130,49 @@ const HeaderHome = () => {
               </NavLink>
               <NavLink className="dropdown-item" to="booking-ticket">
                 Demo Booking Ticket
+              </NavLink>
+              <NavLink className="dropdown-item" to="redux-thunk-demo">
+                Redux thunk demo
+              </NavLink>
+            </div>
+          </li>
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Hook tối ưu
+            </a>
+            <div className="dropdown-menu" aria-labelledby="dropdownId">
+              <NavLink className="dropdown-item" to="demo-use-memo">
+                Demo use memo
+              </NavLink>
+              <NavLink className="dropdown-item" to="demo-use-callback">
+                Demo use callback
+              </NavLink>
+              <NavLink className="dropdown-item" to="demo-use-ref">
+                Demo use ref
+              </NavLink>
+            </div>
+          </li>
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Custom hook
+            </a>
+            <div className="dropdown-menu" aria-labelledby="dropdownId">
+              <NavLink className="dropdown-item" to="demo-custom-hook">
+                Custom hook fetch data
               </NavLink>
             </div>
           </li>

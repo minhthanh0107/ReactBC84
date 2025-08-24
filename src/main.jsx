@@ -37,14 +37,25 @@ import HeaderHome from "./Templates/HeaderHome";
 import DemoUseSearchParam from "./Pages/ReactRouterDom/DemoUseSearchParam";
 import AntdDemo from "./Pages/AntdDemo/AntdDemo";
 
-//setup redux
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
 import ChangeNumberRedux from "./Pages/ReduxDemo/ChangeNumberRedux";
 import ReduxProductsPage from "./Pages/ReduxProducts";
 import ReduxShoppingCartPage from "./Pages/ReduxShoppingCart";
 import BookingTicketPage from "./Pages/ReduxDemo/BookingTicketPage";
 
+//setup redux
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import DemoGetApiThunk from "./ReduxMiddleWare/DemoGetApiThunk";
+import AdminTemplate from "./Templates/AdminTemplate";
+import ProductManagement from "./Pages/Admin/ProductManagement";
+import ProductEdit from "./Pages/Admin/ProductEdit";
+import StoreManagement from "./Pages/Admin/StoreManagement";
+import DemoUseMemo from "./Pages/HookToiUu/DemoUseMemo/DemoUseMemo";
+import DemoUseCallBack from "./Pages/HookToiUu/DemoUseCallBack/DemoUseCallBack";
+import DemoUseRef from "./Pages/HookToiUu/DemoUseRef/DemoUseRef";
+import DemoCustomHook from "./Pages/CustomHook/DemoCustomHook";
+import LoginAuth from "./Pages/Auth/LoginAuth";
+import RegisterAuth from "./Pages/Auth/RegisterAuth";
 /*
   Phân biệt state và props:
   state: giá trị thay đổi dùng để binding lên giao diện, state có thể gán lại giá trị (setState)
@@ -80,8 +91,8 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="" element={<HomeTemplate />}>
             <Route index element={<HomeIndex />}></Route>
-            <Route path="login" element={<Login />}></Route>
-            <Route path="register" element={<Register />}></Route>
+            <Route path="login" element={<LoginAuth />}></Route>
+            <Route path="register" element={<RegisterAuth />}></Route>
             <Route path="antd" element={<AntdDemo />}></Route>
             <Route
               path="redux-change-number"
@@ -95,7 +106,30 @@ createRoot(document.getElementById("root")).render(
               path="redux-shopping-cart"
               element={<ReduxShoppingCartPage />}
             ></Route>
-            <Route path="booking-ticket" element={<BookingTicketPage/>} ></Route>
+            <Route
+              path="booking-ticket"
+              element={<BookingTicketPage />}
+            ></Route>
+            <Route
+              path="redux-thunk-demo"
+              element={<DemoGetApiThunk />}
+            ></Route>
+            <Route
+              path="demo-use-memo"
+              element={<DemoUseMemo/>}
+            ></Route>
+            <Route
+              path="demo-use-callback"
+              element={<DemoUseCallBack/>}
+            ></Route>
+            <Route
+              path="demo-use-ref"
+              element={<DemoUseRef/>}
+            ></Route>
+            <Route
+              path="demo-custom-hook"
+              element={<DemoCustomHook/>}
+            ></Route>
           </Route>
 
           <Route
@@ -135,6 +169,15 @@ createRoot(document.getElementById("root")).render(
               }
             ></Route>
           </Route>
+
+          <Route path="admin" element={<AdminTemplate />}>
+            <Route
+              path="product-management"
+              element={<ProductManagement />}
+            ></Route>
+            <Route path="product-edit/:id" element={<ProductEdit />}></Route>
+          </Route>
+          <Route path='store-management' element={<StoreManagement />} ></Route>
         </Routes>
       </Provider>
     </BrowserRouter>
